@@ -1,5 +1,5 @@
 export type Habit = {
-  id: number;
+  id: string;
   name: string;
   doneCount: number;
   isDoneToday: boolean;
