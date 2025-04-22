@@ -57,10 +57,12 @@ export default function Page() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center bg-gray-50 p-6">
-      <AddHabitForm onAddHabit={handleAddHabit} />
-      <HabitList habits={habits} onToggleHabit={handleToggleHabit} />
-      <HabitStats habits={habits} />
-    </main>
+    <main className="min-h-screen bg-gray-100 flex flex-col items-center px-4 py-10">
+  <h1 className="text-3xl font-semibold mb-8 text-gray-900">Contador de Hábitos</h1>
+  
+  <AddHabitForm onAddHabit={handleAddHabit} />
+  <HabitStats habits={habits} />
+  <HabitList habits={habits} onToggleHabit={handleToggleHabit} />
+</main>
   );
 }

@@ -23,7 +23,7 @@ const HabitList = ({ habits, onToggleHabit }: Props) => {
           pendingHabits.map((habit) => (
             <div
               key={habit.id}
-              className="bg-white p-4 rounded-xl shadow flex items-center justify-between"
+              className="bg-white p-4 rounded-xl shadow flex items-center justify-between transition-shadow duration-200 hover:shadow-md"
             >
               <input
                 type="checkbox"
@@ -64,7 +64,7 @@ const HabitList = ({ habits, onToggleHabit }: Props) => {
           doneHabits.map((habit) => (
             <div
               key={habit.id}
-              className="bg-white p-4 rounded-xl shadow flex items-center justify-between"
+              className="bg-white p-4 rounded-xl shadow flex items-center justify-between transition-shadow duration-200 hover:shadow-md"
             >
               <input
                 type="checkbox"
