@@ -3,9 +3,10 @@ import { Habit } from "@/types/habit";
 type Props = {
   habits: Habit[];
   onToggleHabit: (id: string) => void;
+  onDeleteHabit: (id: string) => void;
 };
 
-const HabitList = ({ habits, onToggleHabit }: Props) => {
+const HabitList = ({ habits, onToggleHabit, onDeleteHabit }: Props) => {
   // Separa os hábitos entre pendentes e feitos
   const doneHabits = habits.filter((h) => h.isDoneToday);
   const pendingHabits = habits.filter((h) => !h.isDoneToday);
@@ -23,8 +24,9 @@ const HabitList = ({ habits, onToggleHabit }: Props) => {
           pendingHabits.map((habit) => (
             <div
               key={habit.id}
-              className="bg-white p-4 rounded-xl shadow flex items-center justify-between transition-shadow duration-200 hover:shadow-md"
+              className="bg-white p-4 rounded-xl shadow flex items-center justify-between transition-shadow hover:shadow-md"
             >
+              {/* Checkbox */}
               <input
                 type="checkbox"
                 checked={habit.isDoneToday}
@@ -32,6 +34,7 @@ const HabitList = ({ habits, onToggleHabit }: Props) => {
                 className="w-5 h-5 accent-black mr-4"
               />
 
+              {/* Nome e contador */}
               <div className="flex-1">
                 <p
                   className={`text-base font-medium ${
@@ -46,6 +49,14 @@ const HabitList = ({ habits, onToggleHabit }: Props) => {
                   Feito: {habit.doneCount}x
                 </p>
               </div>
+
+              {/* Botão de deletar hábito */}
+              <button
+                onClick={() => onDeleteHabit(habit.id)}
+                className="text-red-400 hover:text-red-600 text-sm ml-2 cursor-pointer"
+              >
+                🗑️
+              </button>
             </div>
           ))
         )}

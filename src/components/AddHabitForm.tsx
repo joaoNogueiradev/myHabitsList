@@ -33,12 +33,10 @@ const AddHabitForm = ({ onAddHabit }: Props) => {
           placeholder="Digite um hábito"
           value={habitName}
           onChange={(e) => setHabitName(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-black"
+          className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-black text-black"
         />
 
-        <button
-          className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition-colors"
-        >
+        <button className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition-colors">
           Adicionar Hábito
         </button>
       </div>

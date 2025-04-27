@@ -4,3 +4,9 @@ export type Habit = {
   doneCount: number;
   isDoneToday: boolean;
 };
+
+export interface HabitListGroup {
+  id: string;
+  name: string;
+  habits: Habit[];
+}
