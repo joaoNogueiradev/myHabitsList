@@ -98,10 +98,18 @@ const HabitList = ({ habits, onToggleHabit, onDeleteHabit }: Props) => {
                   Feito: {habit.doneCount}x
                 </p>
               </div>
+              <button
+                onClick={() => onDeleteHabit(habit.id)}
+                className="text-red-400 hover:text-red-600 text-sm ml-2 cursor-pointer"
+              >
+                🗑️
+              </button>
             </div>
           ))
         )}
+        
       </div>
+      
     </div>
   );
 };

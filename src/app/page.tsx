@@ -117,7 +117,7 @@ export default function Page() {
   const activeList = habitLists.find((list) => list.id === activeListId);
 
   return (
-    <main className="min-h-screen bg-gray-100 flex flex-col items-center px-4 py-10">
+    <main className="min-h-screen bg-gray-100 flex flex-col heigh items-center px-4 py-10">
       <h1 className="text-3xl font-semibold mb-8 text-gray-900">
         Contador de Hábitos
       </h1>
